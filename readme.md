@@ -9,7 +9,6 @@
   - [Конфигурация](#knowledge_base_configuration)
   - [Использование с GUI](#knowledge_base_gui)
   - [Использование без GUI](#knowledge_base_sdk)
--
 - [Список изменений](#change_list)
 
 <a name="preparation"></a>
@@ -65,11 +64,11 @@ UsedeskChatSdk.setConfiguration(UsedeskChatConfiguration(...)
 
 | Переменная | Тип | Описание |
 |----------------|------|-------------|
-| urlChat <span style="color:red">*</span> | String | Адрес сервера Чата |
-| urlOfflineForm <span style="color:red">*</span> | String | Адрес для отправки формы обратной связи. Стандартное значение `https://secure.usedesk.ru/` |
-| urlToSendFile <span style="color:red">*</span> | String | Адрес для отправки файлов. Стандартное значение `https://secure.usedesk.ru/uapi/v1/` |
-| companyId <span style="color:red">*</span> | String | Идентификатор компании |
-| channelId <span style="color:red">*</span> | String | Идентификатор канала (добавлен в **v3.1.5**) |
+| urlChat \* | String | Адрес сервера Чата |
+| urlOfflineForm \* | String | Адрес для отправки формы обратной связи. Стандартное значение `https://secure.usedesk.ru/` |
+| urlToSendFile \* | String | Адрес для отправки файлов. Стандартное значение `https://secure.usedesk.ru/uapi/v1/` |
+| companyId \* | String | Идентификатор компании |
+| channelId \* | String | Идентификатор канала (добавлен в **v3.1.5**) |
 | clientSignature | String? | Сигнатура, позволяющая однозначно идентифицировать клиента в системе |
 | clientEmail | String? | Почта клиента |
 | clientName | String? | Имя клиента |
@@ -77,7 +76,8 @@ UsedeskChatSdk.setConfiguration(UsedeskChatConfiguration(...)
 | clientPhoneNumber | Long? | Телефонный номер клиента |
 | clientAdditionalId | Long? | Дополнительный идентификатор клиента |
 | clientInitMessage | String? | Сообщение, автоматически отправляемое от клиента при открытии чата |
-<span style="color:red">*</span> - обязательный параметр
+
+\* - обязательный параметр
 
 Для кастомизации локальных уведомлений нужно создать 2 собственных класса:
 - Сервис, унаследованный от [UsedeskSimpleNotificationsService](https://github.com/usedesk/Android_SDK/tree/master/chat-sdk/src/main/java/ru/usedesk/chat_sdk/service/notifications/view/UsedeskSimpleNotificationsService.kt) (обычный сервис) или [UsedeskForegroundNotificationsService](https://github.com/usedesk/Android_SDK/tree/master/chat-sdk/src/main/java/ru/usedesk/chat_sdk/service/notifications/view/UsedeskForegroundNotificationsService.kt) (foreground сервис). Где можно переопределить некоторые методы:
@@ -258,12 +258,13 @@ UsedeskKnowledgeBaseSdk.setConfiguration(UsedeskKnowledgeBaseConfiguration(...))
 
 | Переменная | Тип | Описание |
 |----------------|------|-------------|
-| urlApi <span style="color:red">*</span>| String | Адрес api сервера. Стандартное значение `https://api.usedesk.ru/` |
-| accountId <span style="color:red">*</span>| String | Идентификатор Базы Знаний в системе |
-| token <span style="color:red">*</span>| String | Токен доступа к API |
+| urlApi \*| String | Адрес api сервера. Стандартное значение `https://api.usedesk.ru/` |
+| accountId \*| String | Идентификатор Базы Знаний в системе |
+| token \*| String | Токен доступа к API |
 | clientEmail | String? | Email клиента |
 | clientName | String? | Имя клиента |
-<span style="color:red">*</span> - обязательный параметр
+
+\* - обязательный параметр
 
 <a name="knowledge_base_gui"></a>
 ### Использование с GUI
